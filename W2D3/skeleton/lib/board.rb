@@ -48,16 +48,15 @@ class Board
   end
 
   def next_turn(ending_cup_idx)
-    # helper method to determine whether #make_move returns :switch, :prompt, or ending_cup_idx
-        # helper method to determine what #make_move returns
+    # helper method to determine what #make_move returns
     if ending_cup_idx == 6 || ending_cup_idx == 13
-      # ended on store -- get to choose where to start again
+    # ended on store -- get to choose where to start again
       :prompt
     elsif @cups[ending_cup_idx].count == 1
-      # ended on empty cup -- switches players' turns
+    # ended on empty cup -- switches players' turns
       :switch
     else
-      # ended on cup with stones in it -- automatically starts there
+    # ended on cup with stones in it -- automatically starts there
       ending_cup_idx
     end
   end
