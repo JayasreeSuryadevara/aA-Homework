@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Title from './title';
+import Calculator from './calculator';
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
-    ReactDOM.render(<Title />, root);
+    ReactDOM.render(<Calculator />, root);
 });
